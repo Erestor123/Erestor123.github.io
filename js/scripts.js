@@ -1,6 +1,7 @@
 function redirect()
 { 
-	var zm = window.location.href.split('=')[1];
+	var zm = decodeURI(window.location.href).split('=')[1];
+	
 	window.location.href = "http://" + zm;
 }
 
